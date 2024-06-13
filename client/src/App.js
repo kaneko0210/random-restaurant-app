@@ -1,3 +1,5 @@
+const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
@@ -90,7 +92,7 @@ function App() {
             <h2>{place.name}</h2>
             <p>Rating: {place.rating}</p>
             <p>{place.vicinity}</p>
-            <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=YOUR_GOOGLE_API_KEY`} alt={place.name} />
+            <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=AIzaSyAxCJypuQ_H22NThqDeqIKmv4hdK3stzyY`} alt={place.name} />
             <div id="map" style={{ height: '400px', width: '100%' }}></div>
           </div>
         )}
