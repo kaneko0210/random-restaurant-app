@@ -1,8 +1,8 @@
-const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+
+const GOOGLE_API_KEY = process.env.REACT_APP_GOOGLE_API_KEY;
 
 function App() {
   const [place, setPlace] = useState(null);
@@ -78,27 +78,4 @@ function App() {
           </label>
           <label>
             Type:
-            <select name="type" onChange={handleFilterChange} value={filters.type}>
-              <option value="restaurant">Restaurant</option>
-              <option value="cafe">Cafe</option>
-              <option value="bar">Bar</option>
-            </select>
-          </label>
-        </div>
-        <button onClick={fetchPlace}>Get Random Restaurant</button>
-        {error && <p className="error">{error}</p>}
-        {place && (
-          <div>
-            <h2>{place.name}</h2>
-            <p>Rating: {place.rating}</p>
-            <p>{place.vicinity}</p>
-            <img src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${place.photos[0].photo_reference}&key=AIzaSyAxCJypuQ_H22NThqDeqIKmv4hdK3stzyY`} alt={place.name} />
-            <div id="map" style={{ height: '400px', width: '100%' }}></div>
-          </div>
-        )}
-      </header>
-    </div>
-  );
-}
-
-export default App;
+            <select name="type" onChange={handleFilterChange
